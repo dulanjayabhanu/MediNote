@@ -5,8 +5,8 @@
 <br/>
 
 <div align="center">
-    <a href="https://github.com/your-repository-link">GitHub</a> |
-    <a href="https://your-docs-link.com">Documentation</a> |
+    <a href="https://github.com/your-repository-link">Release</a> |
+    <a href="https://your-docs-link.com"></a> |
     <a href="https://your-community-link.com">Community</a>
 </div>
 
@@ -106,6 +106,10 @@ Medinote is designed with **ease of use in mind**, following **modern UI/UX desi
 
 The app’s design ensures that **any user—regardless of age or technical experience—can use Medinote comfortably**.  
 
+### Android Compatibility  
+- **Minimum Android Version:** Android Nougat (API Level 24)  
+- **Supported Devices:** Smartphones and tablets running Android 7.0 (Nougat) and above  
+
 ## Getting Started
 Clone the Repository
 
@@ -136,4 +140,4 @@ Medinote is an open-source project, and we welcome contributions from developers
 5. For more details, check the CONTRIBUTING.md.
 
 ## License
-Medinote is licensed under the MIT License. See the LICENSE file for more details.
+Medinote is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
