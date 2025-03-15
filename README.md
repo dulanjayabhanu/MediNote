@@ -6,7 +6,7 @@
 
 <div align="center">
     <a href="https://github.com/dulanjayabhanu/MediNote/releases">Release</a> |
-    <a href="release/">Download App</a> |
+    <a href="https://github.com/dulanjayabhanu/MediNote/blob/main/release/MediNote_v1.0.0.apk">Download App</a> |
     <a href="https://github.com/dulanjayabhanu/MediNote/discussions">Discussions</a>
 </div>
 
@@ -22,7 +22,7 @@
 <br/>
 
 <div align="center">
-    <a href="release/MediNote_V0.0.1.apk" target="_blank">
+    <a href="https://github.com/dulanjayabhanu/MediNote/blob/main/release/MediNote_v1.0.0.apk" target="_blank">
       <img src="assets/medinote_download_button.webp" width="20%"/>
     </a>
 </div>
