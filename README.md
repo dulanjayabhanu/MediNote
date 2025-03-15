@@ -5,9 +5,9 @@
 <br/>
 
 <div align="center">
-    <a href="/releases">Release</a> |
-    <a href="https://your-docs-link.com"></a> |
-    <a href="https://your-community-link.com">Community</a>
+    <a href="https://github.com/dulanjayabhanu/MediNote/releases">Release</a> |
+    <a href="release/MediNote_V0.0.1.apk">Download App</a> |
+    <a href="https://github.com/dulanjayabhanu/MediNote/discussions">Discussions</a>
 </div>
 
 <br/>
