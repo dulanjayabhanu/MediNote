@@ -21,6 +21,12 @@
 
 <br/>
 
+<div align="center">
+    <a href="release/MediNote_V0.0.1.apk" target="_blank">
+      <img src="assets/medinote_download_button.webp" width="20%"/>
+    </a>
+</div>
+
 ## What is Medinote?
 
 **Medinote** is an Android application designed to help users track and visualize their blood pressure measurements effortlessly. Many people struggle with manually recording their readings in notebooks, making it difficult to observe trends over time. **Medinote** provides a **fast, secure, and fully offline solution** to this problem.
