@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Medinote Logo" src="https://your-image-link-here.com/logo.png">
+    <img alt="Medinote Logo" src="assets/main_medinote_banner.webp"/>
 </div>
 
 <br/>
@@ -29,6 +29,10 @@ The app is **open-source**, meaning anyone can contribute and help improve its f
 
 ## Features  
 
+<div align="left">
+  <img src="assets/medinote_main_ui1.webp" alt="Postify Main Wall"/>
+</div>
+
 ### User Management  
 Medinote supports **multiple user accounts**, allowing different users to track their own blood pressure measurements separately. To create an account, users need to provide basic details including **first name, last name, gender, mobile number, and a secure 4-digit password**.  
 
@@ -46,6 +50,11 @@ To make the input process even smoother, users can **fine-tune each value using 
 Once a measurement is entered, users can save their record with a **single tap**. However, to maintain accuracy and prevent unnecessary duplicate entries, the app enforces a **15-minute interval between consecutive measurements**.  
 
 ### Data Visualization  
+
+<div align="left">
+  <img src="assets/medinote_main_ui2.webp" alt="Postify Main Wall"/>
+</div>
+
 One of the key challenges for patients tracking blood pressure manually is understanding how their readings change over time. Medinote solves this by providing **clear, easy-to-read visual charts** for recorded measurements.  
 
 Users can analyze their data over different time frames:  
@@ -98,7 +107,7 @@ Medinote is designed with **ease of use in mind**, following **modern UI/UX desi
 The app’s design ensures that **any user—regardless of age or technical experience—can use Medinote comfortably**.  
 
 ## Getting Started
-1. Clone the Repository
+Clone the Repository
 
 To get a copy of Medinote, run:
 
@@ -113,6 +122,11 @@ cd Medinote
 3. Build and run the application on an emulator or physical device.
 
 ## Contribution
+
+<div align="left">
+  <img src="assets/main_medinote_logo.svg" alt="Postify Main Wall" width="15%"/>
+</div>
+
 Medinote is an open-source project, and we welcome contributions from developers worldwide. If you want to contribute:
 
 1. Fork the repository.
