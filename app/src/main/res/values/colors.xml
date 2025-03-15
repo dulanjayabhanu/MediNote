@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_color_green">#008000</color>
+    <color name="secondary_color_green">#70e000</color>
+    <color name="neutral_color_green">#E7F2D9</color>
+    <color name="primary_color_black">#171717</color>
+    <color name="secondary_color_black">#262626</color>
+    <color name="neutral_color_black">#525252</color>
+    <color name="primary_color_white">#F9FAFB</color>
+    <color name="primary_color_tertiary">#F3F4F6</color>
+    <color name="primary_border_color">#D3D5DA</color>
+    <color name="primary_color_transparent">#00000000</color>
+    <color name="primary_color_red">#d90429</color>
+    <color name="secondary_color_red">#cc444b</color>
+    <color name="neutral_color_red">#fae0e4</color>
+    <color name="ultra_neutral_color_red">#fff0f3</color>
+</resources>

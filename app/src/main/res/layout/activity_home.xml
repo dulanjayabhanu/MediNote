@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color_white"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/homeImageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/homeTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/primary_color_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeImageView1"
+        app:layout_constraintStart_toEndOf="@+id/homeImageView1"
+        app:layout_constraintTop_toTopOf="@+id/homeImageView1" />
+
+    <ImageButton
+        android:id="@+id/homeImageButtonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_background1"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/settings_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/homeImageButtonProfile"
+        app:layout_constraintEnd_toStartOf="@+id/homeImageButtonProfile"
+        app:layout_constraintTop_toTopOf="@+id/homeImageButtonProfile"
+        tools:src="@drawable/settings_dark"
+        tools:srcCompat="@drawable/settings_dark" />
+
+    <ImageButton
+        android:id="@+id/homeImageButtonProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background1"
+        android:padding="10dp"
+        android:src="@drawable/user_action"
+        app:layout_constraintBottom_toBottomOf="@+id/homeImageView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeImageView1"
+        tools:src="@drawable/user_action"
+        tools:srcCompat="@drawable/user_action" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeImageView1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/homeTextViewUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background1"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingStart="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/homeTextViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background1"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingStart="14dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homeConstraintLayoutSysCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_field_background1"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/homeConstraintLayoutPulCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonSysUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/up_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@drawable/up_arrow_dark" />
+
+                    <EditText
+                        android:id="@+id/homeEditTextSys"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_color_transparent"
+                        android:ems="10"
+                        android:fontFamily="@font/inter_bold"
+                        android:hint="00"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:text="120"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary_color_green"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeImageButtonSysUp"
+                        app:layout_constraintStart_toStartOf="@+id/homeImageButtonSysUp"
+                        app:layout_constraintTop_toBottomOf="@+id/homeImageButtonSysUp" />
+
+                    <TextView
+                        android:id="@+id/homeTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="@string/sys"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextSys"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextSys"
+                        app:layout_constraintTop_toBottomOf="@+id/homeEditTextSys" />
+
+                    <TextView
+                        android:id="@+id/homeTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextSys"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextSys"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView2" />
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonSysDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/down_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView3"
+                        tools:srcCompat="@drawable/down_arrow_dark" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homeConstraintLayoutPulCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_field_background1"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeConstraintLayoutSysCard"
+                    app:layout_constraintEnd_toStartOf="@id/homeConstraintLayoutDiaCard"
+                    app:layout_constraintStart_toEndOf="@+id/homeConstraintLayoutSysCard"
+                    app:layout_constraintTop_toTopOf="@+id/homeConstraintLayoutSysCard">
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonPulUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/up_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@drawable/up_arrow_dark" />
+
+                    <EditText
+                        android:id="@+id/homeEditTextPul"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_color_transparent"
+                        android:ems="10"
+                        android:fontFamily="@font/inter_bold"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:text="60"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondary_color_black"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeImageButtonPulUp"
+                        app:layout_constraintStart_toStartOf="@+id/homeImageButtonPulUp"
+                        app:layout_constraintTop_toBottomOf="@+id/homeImageButtonPulUp" />
+
+                    <TextView
+                        android:id="@+id/homeTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="@string/pul"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextPul"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextPul"
+                        app:layout_constraintTop_toBottomOf="@+id/homeEditTextPul" />
+
+                    <TextView
+                        android:id="@+id/homeTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:text="@string/min"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextPul"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextPul"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView4" />
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonPulDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/down_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView5"
+                        tools:srcCompat="@drawable/down_arrow_dark" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homeConstraintLayoutDiaCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_field_background1"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeConstraintLayoutSysCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/homeConstraintLayoutPulCard"
+                    app:layout_constraintTop_toTopOf="@+id/homeConstraintLayoutSysCard">
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonDiaUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/up_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@drawable/up_arrow_dark" />
+
+                    <EditText
+                        android:id="@+id/homeEditTextDia"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_color_transparent"
+                        android:ems="10"
+                        android:fontFamily="@font/inter_bold"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:text="80"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary_color_green"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeImageButtonDiaUp"
+                        app:layout_constraintStart_toStartOf="@+id/homeImageButtonDiaUp"
+                        app:layout_constraintTop_toBottomOf="@+id/homeImageButtonDiaUp" />
+
+                    <TextView
+                        android:id="@+id/homeTextView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="@string/dia"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextDia"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextDia"
+                        app:layout_constraintTop_toBottomOf="@+id/homeEditTextDia" />
+
+                    <TextView
+                        android:id="@+id/homeTextView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_light"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/primary_color_black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/homeEditTextDia"
+                        app:layout_constraintStart_toStartOf="@+id/homeEditTextDia"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView6" />
+
+                    <ImageButton
+                        android:id="@+id/homeImageButtonDiaDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/alert_dialog_background"
+                        android:padding="8dp"
+                        android:src="@drawable/down_arrow_dark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homeTextView7"
+                        tools:srcCompat="@drawable/down_arrow_dark" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/homeButtonSaveMeasurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/primary_color_green"
+                android:fontFamily="@font/inter_bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/save_measurement"
+                android:textColor="@color/primary_color_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/signUpTextView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/input_field_background1"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/homeTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/analyse_records"
+                    android:textColor="@color/primary_color_black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/homeButtonCheckupRound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/primary_color_white"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/checkup_rounds"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12dp"
+                    app:icon="@drawable/stopwatch_dark"
+                    app:iconGravity="top"
+                    app:iconPadding="4dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/neutral_color_black"
+                    app:layout_constraintEnd_toStartOf="@+id/homeButtonDailyRecords"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/homeTextView8"
+                    app:strokeColor="@color/primary_border_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/homeButtonDailyRecords"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:backgroundTint="@color/primary_color_white"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/daily_records"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12dp"
+                    app:icon="@drawable/clock_dark"
+                    app:iconGravity="top"
+                    app:iconPadding="4dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/neutral_color_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/homeButtonCheckupRound"
+                    app:layout_constraintTop_toTopOf="@+id/homeButtonCheckupRound"
+                    app:strokeColor="@color/primary_border_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/homeButtonWeeklyRecords"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/primary_color_white"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/weekly_records"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12dp"
+                    app:icon="@drawable/calendar_week_dark"
+                    app:iconGravity="top"
+                    app:iconPadding="4dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/neutral_color_black"
+                    app:layout_constraintEnd_toEndOf="@+id/homeButtonCheckupRound"
+                    app:layout_constraintStart_toStartOf="@+id/homeButtonCheckupRound"
+                    app:layout_constraintTop_toBottomOf="@+id/homeButtonCheckupRound"
+                    app:strokeColor="@color/primary_border_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/homeButtonMonthlyRecords"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/primary_color_white"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/monthly_records"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12dp"
+                    app:icon="@drawable/calendar_month_dark"
+                    app:iconGravity="top"
+                    app:iconPadding="4dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/neutral_color_black"
+                    app:layout_constraintEnd_toEndOf="@+id/homeButtonDailyRecords"
+                    app:layout_constraintStart_toStartOf="@+id/homeButtonDailyRecords"
+                    app:layout_constraintTop_toBottomOf="@+id/homeButtonDailyRecords"
+                    app:strokeColor="@color/primary_border_color"
+                    app:strokeWidth="1dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

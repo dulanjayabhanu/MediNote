@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_dialog_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/customAlertDialogTextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textColor="@color/primary_color_green"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/customAlertDialogTextViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/primary_color_black"
+        android:textSize="12sp" />
+</LinearLayout>

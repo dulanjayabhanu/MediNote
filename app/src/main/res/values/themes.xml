@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MediNote" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/primary_color_white</item>
+        <item name="android:navigationBarColor">@color/primary_color_white</item>
+    </style>
+
+    <style name="alertDialogView" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMinor">75%</item>
+    </style>
+
+    <style name="Theme.MediNote" parent="Base.Theme.MediNote" />
+</resources>

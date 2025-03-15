@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color_white"
+    tools:context=".SettingsActivity">
+
+    <ImageButton
+        android:id="@+id/settingsImageButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background1"
+        android:padding="10dp"
+        android:src="@drawable/left_arrow_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/left_arrow_dark"
+        tools:srcCompat="@drawable/left_arrow_dark" />
+
+    <TextView
+        android:id="@+id/settingsTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/inter_light"
+        android:text="@string/settings"
+        android:textColor="@color/primary_color_black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsImageButtonBack"
+        app:layout_constraintStart_toEndOf="@+id/settingsImageButtonBack"
+        app:layout_constraintTop_toTopOf="@+id/settingsImageButtonBack" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsImageButtonBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/input_field_background1"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/settingsImageView1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/settingsTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/app_name"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsImageView1"
+                    app:layout_constraintStart_toStartOf="@+id/settingsImageView1"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsImageView1" />
+
+                <TextView
+                    android:id="@+id/settingsTextView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/version"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_color_green"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView2"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView2"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView2" />
+
+                <TextView
+                    android:id="@+id/settingsTextView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/settings_description1"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView3" />
+
+                <TextView
+                    android:id="@+id/settingsTextView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/settings_description2"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView4" />
+
+                <TextView
+                    android:id="@+id/settingsTextView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/settings_description3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView5" />
+
+                <TextView
+                    android:id="@+id/settingsTextView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/settings_description4"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView6" />
+
+                <TextView
+                    android:id="@+id/settingsTextView10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/developed_by"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primary_color_green"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView7" />
+
+                <Button
+                    android:id="@+id/settingsButtonGoToProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/primary_color_white"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/go_to_project"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12dp"
+                    app:icon="@drawable/github_dark"
+                    app:iconPadding="8dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/neutral_color_black"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView10"
+                    app:strokeColor="@color/primary_border_color"
+                    app:strokeWidth="1dp" />
+
+                <TextView
+                    android:id="@+id/settingsTextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/license"
+                    android:textColor="@color/primary_color_black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsButtonGoToProject" />
+
+                <TextView
+                    android:id="@+id/settingsTextView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/license"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/secondary_color_black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/settingsTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTextView11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/settingsTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="12dp"
+                android:text="@string/danger_zone"
+                android:textColor="@color/primary_color_red"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/settingsTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/app_reset"
+                android:textColor="@color/secondary_color_red"
+                android:textSize="12sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/settingsCautionConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/input_field_background3"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/chartCautionImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/info_danger" />
+
+                <TextView
+                    android:id="@+id/chartCautionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/inter_light"
+                    android:text="@string/app_reset_warning_message"
+                    android:textColor="@color/secondary_color_red"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chartCautionImageView"
+                    app:layout_constraintTop_toTopOf="@+id/chartCautionImageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/settingsEditTextAppResetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/input_field_background3"
+                android:ems="10"
+                android:fontFamily="@font/inter_regular"
+                android:hint="@string/confirm_your_password"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:paddingStart="14dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="12dp"
+                android:password="true"
+                android:textColor="@color/secondary_color_red"
+                android:textColorHint="@color/secondary_color_red"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/settingsButtonAppReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/primary_color_red"
+                android:fontFamily="@font/inter_bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/welcome_continue"
+                android:textColor="@color/primary_color_white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
