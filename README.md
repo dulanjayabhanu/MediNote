@@ -5,7 +5,7 @@
 <br/>
 
 <div align="center">
-    <a href="release">Release</a> |
+    <a href="/releases">Release</a> |
     <a href="https://your-docs-link.com"></a> |
     <a href="https://your-community-link.com">Community</a>
 </div>
