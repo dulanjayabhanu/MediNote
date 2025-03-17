@@ -277,7 +277,7 @@
                 android:fontFamily="@font/inter_regular"
                 android:hint="@string/last_name"
                 android:inputType="phone"
-                android:maxLength="10"
+                android:maxLength="25"
                 android:maxLines="1"
                 android:paddingStart="14dp"
                 android:paddingTop="12dp"

@@ -1,6 +1,7 @@
 package lk.dulanjaya.medinote;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -139,12 +140,21 @@ public class CheckupRoundActivity extends AppCompatActivity {
                         backImageButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                UiToolkitManager.ActivityManager.navigateToActivity(CheckupRoundActivity.this, new HomeActivity());
+                                UiToolkitManager.ActivityManager.navigateToActivity(CheckupRoundActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
                             }
                         });
                     }
                 });
             }
         }).start();
+    }
+
+    // override the navigation back button event
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            UiToolkitManager.ActivityManager.navigateToActivity(CheckupRoundActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

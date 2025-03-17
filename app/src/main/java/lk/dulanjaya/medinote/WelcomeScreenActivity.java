@@ -27,13 +27,13 @@ public class WelcomeScreenActivity extends AppCompatActivity {
             return insets;
         });
 
-        UiToolkitManager.setStatusBarAndNavigationBarColor(WelcomeScreenActivity.this, R.color.neutral_color_green, R.color.primary_border_color);
+        UiToolkitManager.setStatusBarAndNavigationBarColor(WelcomeScreenActivity.this, R.color.primary_color_white, R.color.primary_color_white);
 
         Button continueButton = findViewById(R.id.welcomeScreenButtonContinue);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(WelcomeScreenActivity.this, new SignInActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(WelcomeScreenActivity.this, UiToolkitManager.ActivityManager.getSignInActivity());
             }
         });
 

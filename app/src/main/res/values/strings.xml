@@ -52,4 +52,5 @@
     <string name="app_reset">App Reset</string>
     <string name="go_to_project">Go To Project</string>
     <string name="license">License</string>
+    <string name="sign_up">SignUp</string>
 </resources>

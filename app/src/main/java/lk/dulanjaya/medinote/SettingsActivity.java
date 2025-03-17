@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -167,7 +168,7 @@ public class SettingsActivity extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            UiToolkitManager.ActivityManager.navigateToActivity(SettingsActivity.this, new SplashScreenActivity());
+                                            UiToolkitManager.ActivityManager.navigateToActivity(SettingsActivity.this, UiToolkitManager.ActivityManager.getSplashScreenActivity());
                                         }
                                     });
 
@@ -198,7 +199,7 @@ public class SettingsActivity extends AppCompatActivity {
         backImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(SettingsActivity.this, new HomeActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(SettingsActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
             }
         });
 
@@ -210,5 +211,14 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Choose Browser"));
             }
         });
+    }
+
+    // override the navigation back button event
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            UiToolkitManager.ActivityManager.navigateToActivity(SettingsActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

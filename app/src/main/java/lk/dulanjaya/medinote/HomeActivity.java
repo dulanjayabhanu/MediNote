@@ -2,6 +2,7 @@ package lk.dulanjaya.medinote;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -392,7 +395,7 @@ public class HomeActivity extends AppCompatActivity {
         checkupRoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new CheckupRoundActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getCheckupRoundActivity());
             }
         });
 
@@ -400,7 +403,7 @@ public class HomeActivity extends AppCompatActivity {
         dailyRecordsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new DailyRecordsActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getDailyRecordsActivity());
             }
         });
 
@@ -408,7 +411,7 @@ public class HomeActivity extends AppCompatActivity {
         weeklyRecordsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new WeeklyRecordsActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getWeeklyRecordsActivity());
             }
         });
 
@@ -416,7 +419,7 @@ public class HomeActivity extends AppCompatActivity {
         monthlyRecordsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new MonthlyRecordsActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getMonthlyRecordsActivity());
             }
         });
 
@@ -424,7 +427,7 @@ public class HomeActivity extends AppCompatActivity {
         profileImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new ProfileActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getProfileActivity());
             }
         });
 
@@ -432,7 +435,7 @@ public class HomeActivity extends AppCompatActivity {
         settingsImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, new SettingsActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(HomeActivity.this, UiToolkitManager.ActivityManager.getSettingsActivity());
             }
         });
     }

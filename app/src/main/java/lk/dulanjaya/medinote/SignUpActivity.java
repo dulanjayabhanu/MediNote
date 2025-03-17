@@ -134,7 +134,7 @@ public class SignUpActivity extends AppCompatActivity {
                 }else if(firstNameEditText.getText().toString().isBlank()){
                     message = "Enter first name";
 
-                }else if(!Validations.isAlphabetic(firstNameEditText.getText().toString())){
+                }else if(!Validations.isAlphabetic(firstNameEditText.getText().toString().trim())){
                     message = "Invalid first name";
 
                 }else if(lastNameEditText.getText().toString().isEmpty()){
@@ -143,7 +143,7 @@ public class SignUpActivity extends AppCompatActivity {
                 }else if(lastNameEditText.getText().toString().isBlank()){
                     message = "Enter last name";
 
-                }else if(!Validations.isAlphabetic(lastNameEditText.getText().toString())){
+                }else if(!Validations.isAlphabetic(lastNameEditText.getText().toString().trim())){
                     message = "Invalid last name";
 
                 }else if(genderSpinner.getSelectedItemPosition() == 0){
@@ -155,8 +155,8 @@ public class SignUpActivity extends AppCompatActivity {
                 }else if(mobileEditText.getText().toString().isBlank()) {
                     message = "Enter mobile";
 
-                }else if(!Validations.isMobileValid(mobileEditText.getText().toString())){
-                    message = "Invlid mobile";
+                }else if(!Validations.isStandardMobileValid(mobileEditText.getText().toString())){
+                    message = "Invalid mobile";
 
                 }else if(passwordEditText.getText().toString().isEmpty()){
                     message = "Enter password";
@@ -203,8 +203,8 @@ public class SignUpActivity extends AppCompatActivity {
                                     SQLiteDatabase sqLiteDatabase2 = sqLiteHelper.getWritableDatabase();
 
                                     ContentValues contentValues = new ContentValues();
-                                    contentValues.put("firstName", firstNameEditText.getText().toString());
-                                    contentValues.put("lastName", lastNameEditText.getText().toString());
+                                    contentValues.put("firstName", firstNameEditText.getText().toString().trim());
+                                    contentValues.put("lastName", lastNameEditText.getText().toString().trim());
                                     contentValues.put("gender", genderSpinner.getSelectedItem().toString());
                                     contentValues.put("dateOfBirth", dateOfBirth[0]);
                                     contentValues.put("mobile", mobileEditText.getText().toString());
@@ -219,8 +219,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            UiToolkitManager.showAlertDialog(SignUpActivity.this, "SignUp", "Account Created!");
-                                            UiToolkitManager.ActivityManager.navigateToActivity(SignUpActivity.this, new SignInActivity());
+                                            UiToolkitManager.ActivityManager.navigateToActivity(SignUpActivity.this, UiToolkitManager.ActivityManager.getSignInActivity());
                                         }
                                     });
 
@@ -252,7 +251,7 @@ public class SignUpActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(SignUpActivity.this, new SignInActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(SignUpActivity.this, UiToolkitManager.ActivityManager.getSignInActivity());
             }
         });
     }

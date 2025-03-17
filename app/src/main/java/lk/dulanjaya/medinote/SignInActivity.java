@@ -164,7 +164,7 @@ public class SignInActivity extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            UiToolkitManager.ActivityManager.navigateToActivity(SignInActivity.this, new HomeActivity());
+                                            UiToolkitManager.ActivityManager.navigateToActivity(SignInActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
                                         }
                                     });
 
@@ -196,7 +196,7 @@ public class SignInActivity extends AppCompatActivity {
         newAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UiToolkitManager.ActivityManager.navigateToActivity(SignInActivity.this, new SignUpActivity());
+                UiToolkitManager.ActivityManager.navigateToActivity(SignInActivity.this, UiToolkitManager.ActivityManager.getSignUpActivity());
             }
         });
     }

@@ -35,6 +35,9 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         UiToolkitManager.setStatusBarAndNavigationBarColor(SplashScreenActivity.this, R.color.primary_color_white, R.color.primary_color_white);
 
+        //
+        UiToolkitManager.ActivityManager.establishActivities(SplashScreenActivity.this);
+
         ImageView imageView1 = findViewById(R.id.splashScreenImageView1);
 
         Animation animation = AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.splash_screen_animation);
@@ -80,8 +83,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                                runOnUiThread(new Runnable() {
                                    @Override
                                    public void run() {
-                                       // user navigate to the home activity
-                                       UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, new WelcomeScreenActivity());
+                                       // user navigate to the welcome screen activity
+                                       UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, UiToolkitManager.ActivityManager.getWelcomeScreenActivity());
                                    }
                                });
 
@@ -105,7 +108,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                                        @Override
                                        public void run() {
                                            // user navigate to the home activity
-                                           UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, new HomeActivity());
+                                           UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
                                        }
                                    });
 
@@ -117,7 +120,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                                        @Override
                                        public void run() {
                                            // user navigate to the signin activity
-                                           UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, new SignInActivity());
+                                           UiToolkitManager.ActivityManager.navigateToActivity(SplashScreenActivity.this, UiToolkitManager.ActivityManager.getSignInActivity());
                                        }
                                    });
                                }

@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -99,7 +100,7 @@ public class ProfileActivity extends AppCompatActivity {
                                         }else if(firstNameEditText.getText().toString().isBlank()){
                                             message = "Enter first name";
 
-                                        }else if(!Validations.isAlphabetic(firstNameEditText.getText().toString())){
+                                        }else if(!Validations.isAlphabetic(firstNameEditText.getText().toString().trim())){
                                             message = "Invalid first name";
 
                                         }else if(lastNameEditText.getText().toString().isBlank()){
@@ -108,7 +109,7 @@ public class ProfileActivity extends AppCompatActivity {
                                         }else if(lastNameEditText.getText().toString().isBlank()){
                                             message = "Enter last name";
 
-                                        }else if(!Validations.isAlphabetic(lastNameEditText.getText().toString())){
+                                        }else if(!Validations.isAlphabetic(lastNameEditText.getText().toString().trim())){
                                             message = "Invalid last name";
 
                                         }else {
@@ -120,8 +121,8 @@ public class ProfileActivity extends AppCompatActivity {
                                                     SQLiteDatabase sqLiteDatabase2 = sqLiteHelper.getWritableDatabase();
 
                                                     ContentValues contentValues = new ContentValues();
-                                                    contentValues.put("firstName", firstNameEditText.getText().toString());
-                                                    contentValues.put("lastName", lastNameEditText.getText().toString());
+                                                    contentValues.put("firstName", firstNameEditText.getText().toString().trim());
+                                                    contentValues.put("lastName", lastNameEditText.getText().toString().trim());
 
                                                     String whereClause = "`mobile`=?";
                                                     String[] whereArgs = new String[]{superUserCursor.getString(5)};
@@ -166,7 +167,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 backImageButton.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        UiToolkitManager.ActivityManager.navigateToActivity(ProfileActivity.this, new HomeActivity());
+                                        UiToolkitManager.ActivityManager.navigateToActivity(ProfileActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
                                     }
                                 });
 
@@ -233,7 +234,7 @@ public class ProfileActivity extends AppCompatActivity {
                                                 }).start();
 
                                                 // navigate to the splashscreen activity
-                                                UiToolkitManager.ActivityManager.navigateToActivity(ProfileActivity.this, new SplashScreenActivity());
+                                                UiToolkitManager.ActivityManager.navigateToActivity(ProfileActivity.this, UiToolkitManager.ActivityManager.getSplashScreenActivity());
 
                                             }else{
                                                 // password not matched
@@ -260,5 +261,14 @@ public class ProfileActivity extends AppCompatActivity {
         }catch(Exception e){
             Log.i("MediNoteLog", "Error");
         }
+    }
+
+    // override the navigation back button event
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            UiToolkitManager.ActivityManager.navigateToActivity(ProfileActivity.this, UiToolkitManager.ActivityManager.getHomeActivity());
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
