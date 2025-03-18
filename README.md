@@ -6,7 +6,7 @@
 
 <div align="center">
     <a href="https://github.com/dulanjayabhanu/MediNote/releases">Release</a> |
-    <a href="https://github.com/dulanjayabhanu/MediNote/releases/download/v1.0.2/MediNote_v1.0.2.apk">Download Latest Version</a> |
+    <a href="https://apt.izzysoft.de/packages/lk.dulanjaya.medinote">Get It On IzzyOnDroid</a> |
     <a href="https://github.com/dulanjayabhanu/MediNote/discussions">Discussions</a>
 </div>
 
@@ -22,8 +22,8 @@
 <br/>
 
 <div align="center">
-    <a href="https://github.com/dulanjayabhanu/MediNote/releases/download/v1.0.2/MediNote_v1.0.2.apk" target="_blank">
-      <img src="assets/medinote_download_button.webp" width="245px" height="48px"/>
+    <a href="https://apt.izzysoft.de/packages/lk.dulanjaya.medinote" target="_blank">
+      <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="124px"/>
     </a>
 </div>
 
